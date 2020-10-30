@@ -1,0 +1,53 @@
+.login-form-container {
+    display: block;
+    padding: 1em;
+}
+
+.login-form-profile-icon {
+    display: block;
+    margin: auto;
+    width: 15%;
+}
+
+.form-input-1 {
+    display: block;
+    margin: 2em auto;
+    padding: 1em;
+    width: 100%;
+}
+
+.under-form-text {
+    margin: auto;
+}
+
+
+.login-form-submit {
+    margin: 0.5em auto;
+    width: 50%;
+    padding: 1em;
+}
+
+
+
+@media (min-width: 300px) {
+    .middle-box {
+        margin: 10vh auto;
+        max-width: 95%;
+        min-width: 75%;
+    }
+}
+
+
+@media (min-width: 600px) {
+    .middle-box {
+        margin: 10vh auto;
+        max-width: 550px;
+        min-width: 350px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .login-form-profile-icon {
+        margin-bottom: 2em;
+    }
+}
+
