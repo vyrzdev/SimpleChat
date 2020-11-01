@@ -1,0 +1,21 @@
+{% extends "layout/middle_box_dynamic_margin.html" %}
+
+{% block middle_box %}
+    <div class="room-list-container">
+        <div class="room-list">
+            {% for room in rooms %}
+                <a href="/room/{{ room.room_code }}">
+                    <span class="room-list-item">{{ room.room_code }}</span>
+                </a>
+            {% endfor %}
+        </div>
+        <div class="home-bottom-buttons">
+            <a class="button-link" href="/room/create">
+                Create a Room
+            </a>
+            <a class="button-link" href="/logout">
+                Logout
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,6 +1,7 @@
 from . import app, models
 from flask import render_template, redirect, request
 from flask_login import current_user, logout_user, login_user, login_required
+from html import escape
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -9,7 +10,10 @@ def login():
         return redirect("/")
 
     if request.method == "GET":
-        return render_template("auth/login.html")
+        if request.args.get("next") is not None:
+            return render_template("auth/login.html", next=request.args.get("next"))
+        else:
+            return render_template("auth/login.html")
     else:
         username = request.form.get("username")
         password = request.form.get("password")
@@ -25,6 +29,9 @@ def login():
             return render_template("auth/login.html", alerts=[models.Alert("Invalid Username/Password!")])
         else:
             login_user(userObject)
+            print(request.args.get("next"))
+            if request.args.get("next") is not None:
+                return redirect(request.args.get("next"))
             return redirect("/")
 
 
@@ -37,6 +44,7 @@ def register():
         return render_template("auth/register.html")
     else:
         username = request.form.get("username")
+        username = escape(username)
         email = request.form.get("email")
         password = request.form.get("password")
         check_password = request.form.get("check_password")

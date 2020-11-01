@@ -1,3 +1,3 @@
-from .. import app, login, models
+from .. import app, login, models, socketio
 
-from . import auth
+from . import auth, chat

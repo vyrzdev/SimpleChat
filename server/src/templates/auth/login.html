@@ -3,7 +3,7 @@
 {% block middle_box %}
     <div class="login-form-container">
         <img src="/static/user.svg" class="login-form-profile-icon">
-        <form class="login-form" action="/login" method="post">
+        <form class="login-form" action="/login?next={{ next }}" method="post">
             <input class="form-input-1" type="text" name="username" placeholder="Username">
             <input class="form-input-1" type="password" name="password" placeholder="Password">
             <input class="login-form-submit" type="submit" value="Login">

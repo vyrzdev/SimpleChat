@@ -51,3 +51,34 @@
     }
 }
 
+.button-link {
+    margin: auto 0.5em;
+    padding: 0.5em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.home-bottom-buttons {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: nowrap;
+    align-content: center;
+}
+
+.room-list-item {
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 80%;
+    display: block;
+    background-color: #444444;
+}
+
+.enter-code-container {
+    padding: 1em;
+    margin: 1em;
+}
+.room-list-container {
+    padding: 1em;
+}
+
