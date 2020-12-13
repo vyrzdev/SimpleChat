@@ -3,7 +3,7 @@ class Config:
         db_connection_string = None
 
     class Flask:
-        secret_key = "DEFAULT"
+        secret_key = "SPANKBANG@*#^@*!&^!"
 
     class App:
         code_length = 8
